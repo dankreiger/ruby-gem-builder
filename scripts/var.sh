@@ -8,10 +8,10 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
-
-NAME=$(printf "\n${CYAN}Enter the name of your ruby gem and press [ENTER]: ${NC}")
-SUMMARY=$(printf "\n${CYAN}Enter a brief summary about your ruby gem and press [ENTER]: ${NC}")
-AUTHORS=$(printf "\n${CYAN}Enter the author(s) of your ruby gem and press [ENTER]: ${NC}")
-EMAIL=$(printf "\n${CYAN}Enter the email address(es) associated with your ruby gem and press [ENTER]: ${NC}")
-LICENSES=$(printf "\n${CYAN}Enter any license(s) associated with your ruby gem and press [ENTER]: ${NC}")
-HOMEPAGE=$(printf "\n${CYAN}Enter the website homepage for your ruby gem and press [ENTER]: ${NC}")
+HEADER=$(printf "\n${RED}Ruby Gemspec Info: ${NC}")
+NAME=$(printf "\n${CYAN}name: ${NC}")
+SUMMARY=$(printf "\n${CYAN}summary: ${NC}")
+AUTHORS=$(printf "\n${CYAN}author(s): ${NC}")
+EMAIL=$(printf "\n${CYAN}email(s): ${NC}")
+LICENSES=$(printf "\n${CYAN}license(s): ${NC}")
+HOMEPAGE=$(printf "\n${CYAN}homepage: ${NC}")

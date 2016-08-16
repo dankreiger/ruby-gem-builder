@@ -1,12 +1,13 @@
 #!/bin/sh
 
 gem_info(){
-echo ""; echo $NAME;read_info name;
-echo ""; echo $SUMMARY;read_info summary;
-echo ""; echo $AUTHORS;read_info authors;
-echo ""; echo $EMAIL;read_info email;
-echo ""; echo $LICENSES;read_info licenses;
-echo ""; echo $HOMEPAGE;read_info homepage;
+echo ""; echo $HEADER;
+printf $NAME && read_info name
+printf $SUMMARY && read_info summary;
+printf $AUTHORS && read_info authors;
+printf $EMAIL && read_info email;
+printf $LICENSES && read_info licenses;
+printf $HOMEPAGE && read_info homepage;
 }
 
 
@@ -50,8 +51,10 @@ Gem::Specification.new do |s|
   s.description = ""
   s.authors     = ["$authors"]
   s.email       = ["$email"]
-  s.files       = Dir["lib/**/*.rb"]
   s.homepage    = "$homepage"
+  s.files       = Dir["lib/**/*.rb"]
+  s.add_dependency 'activesupport', '~> 5.0'
+  s.add_development_dependency 'rspec', '~> 3.5', '>= 3.5.0'
 end
 EOF
 
