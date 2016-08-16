@@ -1,5 +1,5 @@
 #!/bin/sh
-while IFS= read -r var;do source scripts/$var.sh;done < src.txt
+while IFS= read -r var;do source scripts/$var.sh;done < txt/src.txt
 gem_info
 lib_base
 new_files
