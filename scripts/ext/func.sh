@@ -65,3 +65,12 @@ echo ""
 push_gem() {
   gem push $name-0.0.1.gem
 }
+
+init_gemfile() {
+  bundle init
+  bundle
+}
+
+gem_bundle() {
+  bundle gem $name
+}
